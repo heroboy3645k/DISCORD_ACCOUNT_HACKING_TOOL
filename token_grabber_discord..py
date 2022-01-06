@@ -51,17 +51,12 @@ class Bot:
                 time.sleep(3)
     def build_gift(self):
   
-        # Opening the primary image (used in background)
         img1 = Image.open("starter_gift.png")
         
-        # Opening the secondary image (overlay image)
         img2 = Image.open("qr.png")
         
-        # Pasting img2 image on top of img1 
-        # starting at coordinates (0, 0)
         img1.paste(img2, (211,671))
         
-        # Displaying the image
         img1.save('result.png')
 
         #os.remove('qr.png')
