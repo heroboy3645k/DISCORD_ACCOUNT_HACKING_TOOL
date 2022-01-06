@@ -13,7 +13,6 @@ from PIL import Image
 ua = UserAgent()
 
 capabilities = DesiredCapabilities.CHROME
-# capabilities["loggingPrefs"] = {"performance": "ALL"}  # chromedriver < ~75
 capabilities["goog:loggingPrefs"] = {"performance": "ALL"}  # chromedriver 75+
 
 class Bot:
