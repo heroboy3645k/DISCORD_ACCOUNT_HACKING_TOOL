@@ -1,13 +1,9 @@
-from requests.api import request
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.keys import Keys
 import time
 from fake_useragent import UserAgent
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import json, requests
-import urllib, os
+import json
 from PIL import Image
 
 ua = UserAgent()
@@ -15,9 +11,11 @@ ua = UserAgent()
 capabilities = DesiredCapabilities.CHROME
 capabilities["goog:loggingPrefs"] = {"performance": "ALL"}  # chromedriver 75+
 
+
 class Bot:
     def __init__(self):
         self.wd = webdriver.Chrome(ChromeDriverManager().install(), desired_capabilities=capabilities)
+
     def get_token(self):
         while True:
             logs = self.wd.get_log('performance')
@@ -29,7 +27,7 @@ class Bot:
                         params = message['params']
                         headers = params['headers']
                         authorization_token = headers['authorization']
-                        return authorization_token 
+                        return authorization_token
                 except Exception as e:
                     print(e)
 
@@ -48,32 +46,21 @@ class Bot:
             except:
                 print('again')
                 time.sleep(3)
+
     def build_gift(self):
-  
         img1 = Image.open("starter_gift.png")
-        
         img2 = Image.open("qr.png")
-        
-        img1.paste(img2, (211,671))
-        
+        img1.paste(img2, (211, 671))
         img1.save('result.png')
 
-        #os.remove('qr.png')
+        # os.remove('qr.png')
 
 
 bot = Bot()
-
-
 bot.get_qr()
-
 bot.build_gift()
 
-
 token = bot.get_token()
-
 print(token)
 
 time.sleep(1000)
-
-
-        
