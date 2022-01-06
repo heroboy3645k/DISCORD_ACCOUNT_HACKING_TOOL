@@ -1,4 +1,4 @@
-# DISCORD_ACCOUNT_HACKING_TOOL
+# DISCORD_ACCOUNT_HACKING_TOOL ( EDUCATIONAL PURPOSE )
 Hack any account sending fake nitro QR code (only for educational purpose)
 
 1. Start my program.
