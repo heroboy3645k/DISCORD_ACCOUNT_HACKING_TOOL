@@ -9,4 +9,4 @@ Hack any account sending fake nitro QR code (only for educational purpose)
 6. You can check every servers the victim is in and channels. ( Can't check dm channels but u can send dm messages )
 7. type "commands" command to see commands. Not every commands are working !
 8. Modules: pillow, webdriver_manager, selenium, json, fake_useragent 
-9. TIP: Do not send dm messages to fast and do not use get_server_users command because discord will block victim account.
+9. TIP: Do not send dm messages too fast and do not use get_server_users command because discord will block victim account.
